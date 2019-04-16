@@ -31,11 +31,12 @@ class NowPlayingViewController: UIViewController {
             print("here")
             gsController?.mediaPlayer.pause()
             gsController?.isPlaying = false
-            pause_play_button.setBackgroundImage(UIImage(named: "icons8-play-50.png"), for: UIControl.State.normal)
+            pause_play_button.setImage(UIImage(named: "icons8-play-50.png"), for: UIControl.State.normal)
         }
         else {
             gsController?.mediaPlayer.play()
             gsController?.isPlaying = true
+            pause_play_button.setImage(UIImage(named: "icons8-pause-50.png"), for: UIControl.State.normal)
         }
     }
     
@@ -44,7 +45,7 @@ class NowPlayingViewController: UIViewController {
         albumLabel.text = gsController?.currentSong.albumTitle as! String
         artistLabel.text = gsController?.currentSong.artist as! String
         songTitleLabel.text = gsController?.currentSong.title as! String
-    //    albumArtwork.image = gsController?.currentSong.artwork?.image(at: CGSize)
+        albumArtwork.image = gsController?.currentSong.artwork!.image(at: CGSize(width: 500, height: 500))
         gsController?.isPlaying = true
 
 
