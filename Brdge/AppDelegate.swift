@@ -7,16 +7,40 @@
 //
 
 import UIKit
+import MediaPlayer
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let gsController = GlobalStateController()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let tabBarController = window?.rootViewController as! BaseTabBarController
+        let vc1 = tabBarController.viewControllers?.first as! HomeViewController
+        vc1.gsController = gsController
+        let vc2 = tabBarController.viewControllers?.last as! NowPlayingViewController
+        vc2.gsController = gsController
+//            let viewControllers = tabBarController.viewControllers. else {
+//                return true
+//        }
+//        for viewController in viewControllers {
+//            if viewController is HomeViewController {
+//                let vc = viewController as! HomeViewController
+//                vc.gsController = gsController
+//            }
+//            if viewController is NowPlayingViewController {
+//                let vc = viewController as! NowPlayingViewController
+//                vc.gsController = gsController
+//            }
+//            else {
+//                print("error")
+//            }
+//        }
+        print("finished")
         return true
+            
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -40,7 +64,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
 
 }
 

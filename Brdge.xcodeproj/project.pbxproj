@@ -8,13 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		0B3007A0224424E300A18F8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30079F224424E300A18F8E /* AppDelegate.swift */; };
-		0B3007A2224424E300A18F8E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3007A1224424E300A18F8E /* FirstViewController.swift */; };
-		0B3007A4224424E300A18F8E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3007A3224424E300A18F8E /* SecondViewController.swift */; };
+		0B3007A2224424E300A18F8E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3007A1224424E300A18F8E /* HomeViewController.swift */; };
+		0B3007A4224424E300A18F8E /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3007A3224424E300A18F8E /* NowPlayingViewController.swift */; };
 		0B3007A7224424E300A18F8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3007A5224424E300A18F8E /* Main.storyboard */; };
 		0B3007A9224424E400A18F8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B3007A8224424E400A18F8E /* Assets.xcassets */; };
 		0B3007AC224424E400A18F8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3007AA224424E400A18F8E /* LaunchScreen.storyboard */; };
 		0B3007B7224424E400A18F8E /* BrdgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3007B6224424E400A18F8E /* BrdgeTests.swift */; };
 		0B3007C2224424E400A18F8E /* BrdgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3007C1224424E400A18F8E /* BrdgeUITests.swift */; };
+		0B3007D722443D0C00A18F8E /* All the Shine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B3007D022443D0C00A18F8E /* All the Shine.mp3 */; };
+		0B3007D822443D0C00A18F8E /* Childish Gambino @ The Atrium.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B3007D122443D0C00A18F8E /* Childish Gambino @ The Atrium.mp3 */; };
+		0B3007D922443D0C00A18F8E /* Crystal Silence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B3007D222443D0C00A18F8E /* Crystal Silence.mp3 */; };
+		0B3007DB22443D0C00A18F8E /* Wicked Games.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B3007D422443D0C00A18F8E /* Wicked Games.mp3 */; };
+		0B3007DC22443D0C00A18F8E /* Make This Cash Forever (feat. Doughboy Clay & Kiki Alexandria) [Explicit].mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B3007D522443D0C00A18F8E /* Make This Cash Forever (feat. Doughboy Clay & Kiki Alexandria) [Explicit].mp3 */; };
+		0B3007DD22443D0C00A18F8E /* After School.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B3007D622443D0C00A18F8E /* After School.mp3 */; };
+		0B3007DF2249678200A18F8E /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3007DE2249678200A18F8E /* MediaCell.swift */; };
+		0BC1E041226404CE00C96C51 /* MusicDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC1E040226404CE00C96C51 /* MusicDetails.swift */; };
+		0BC1E0432264F3D300C96C51 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC1E0422264F3D300C96C51 /* BaseTabBarController.swift */; };
+		0BC1E0562265088000C96C51 /* icons8-stop-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BC1E051226505BE00C96C51 /* icons8-stop-50.png */; };
+		0BC1E0572265088600C96C51 /* icons8-rewind-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BC1E052226505BE00C96C51 /* icons8-rewind-50.png */; };
+		0BC1E0582265088900C96C51 /* icons8-fast-forward-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BC1E053226505BE00C96C51 /* icons8-fast-forward-50.png */; };
+		0BC1E0592265088B00C96C51 /* icons8-play-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BC1E054226505BE00C96C51 /* icons8-play-50.png */; };
+		0BC1E05A2265088F00C96C51 /* icons8-pause-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BC1E055226505BE00C96C51 /* icons8-pause-50.png */; };
+		0BFDB39E226513A200FEDDDD /* GlobalStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFDB39D226513A200FEDDDD /* GlobalStateController.swift */; };
 		0DAFEABCEF1BA4AD73019634 /* Pods_BrdgeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82753105458F0F9987B2C30 /* Pods_BrdgeUITests.framework */; };
 		8EE2BB7D5F42F457642DF7B8 /* Pods_BrdgeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D84FCBB6E84046995A0447D4 /* Pods_BrdgeTests.framework */; };
 		C221484CC6837BC2BB06D378 /* Pods_Brdge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9809643BACCB20BCF77A97 /* Pods_Brdge.framework */; };
@@ -40,8 +55,8 @@
 /* Begin PBXFileReference section */
 		0B30079C224424E300A18F8E /* Brdge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brdge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B30079F224424E300A18F8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0B3007A1224424E300A18F8E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		0B3007A3224424E300A18F8E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		0B3007A1224424E300A18F8E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0B3007A3224424E300A18F8E /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 		0B3007A6224424E300A18F8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B3007A8224424E400A18F8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B3007AB224424E400A18F8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +67,21 @@
 		0B3007BD224424E400A18F8E /* BrdgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrdgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3007C1224424E400A18F8E /* BrdgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrdgeUITests.swift; sourceTree = "<group>"; };
 		0B3007C3224424E400A18F8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B3007D022443D0C00A18F8E /* All the Shine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "All the Shine.mp3"; sourceTree = "<group>"; };
+		0B3007D122443D0C00A18F8E /* Childish Gambino @ The Atrium.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Childish Gambino @ The Atrium.mp3"; sourceTree = "<group>"; };
+		0B3007D222443D0C00A18F8E /* Crystal Silence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Crystal Silence.mp3"; sourceTree = "<group>"; };
+		0B3007D422443D0C00A18F8E /* Wicked Games.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Wicked Games.mp3"; sourceTree = "<group>"; };
+		0B3007D522443D0C00A18F8E /* Make This Cash Forever (feat. Doughboy Clay & Kiki Alexandria) [Explicit].mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Make This Cash Forever (feat. Doughboy Clay & Kiki Alexandria) [Explicit].mp3"; sourceTree = "<group>"; };
+		0B3007D622443D0C00A18F8E /* After School.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "After School.mp3"; sourceTree = "<group>"; };
+		0B3007DE2249678200A18F8E /* MediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
+		0BC1E040226404CE00C96C51 /* MusicDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDetails.swift; sourceTree = "<group>"; };
+		0BC1E0422264F3D300C96C51 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		0BC1E051226505BE00C96C51 /* icons8-stop-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-stop-50.png"; sourceTree = "<group>"; };
+		0BC1E052226505BE00C96C51 /* icons8-rewind-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-rewind-50.png"; sourceTree = "<group>"; };
+		0BC1E053226505BE00C96C51 /* icons8-fast-forward-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-fast-forward-50.png"; sourceTree = "<group>"; };
+		0BC1E054226505BE00C96C51 /* icons8-play-50.png */ = {isa = PBXFileReference; explicitFileType = image.png; path = "icons8-play-50.png"; sourceTree = "<group>"; };
+		0BC1E055226505BE00C96C51 /* icons8-pause-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-pause-50.png"; sourceTree = "<group>"; };
+		0BFDB39D226513A200FEDDDD /* GlobalStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalStateController.swift; sourceTree = "<group>"; };
 		4460D6D8244B840CDD688F04 /* Pods-BrdgeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrdgeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BrdgeTests/Pods-BrdgeTests.release.xcconfig"; sourceTree = "<group>"; };
 		58D03C7094D9FF7DA92011F4 /* Pods-BrdgeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrdgeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrdgeTests/Pods-BrdgeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		65E1979C9753F4210497C7CB /* Pods-Brdge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brdge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brdge/Pods-Brdge.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +137,8 @@
 		0B300793224424E300A18F8E = {
 			isa = PBXGroup;
 			children = (
+				0BC1E04F2264F99700C96C51 /* Icons */,
+				0B3007CF22443D0C00A18F8E /* Songs */,
 				0B30079E224424E300A18F8E /* Brdge */,
 				0B3007B5224424E400A18F8E /* BrdgeTests */,
 				0B3007C0224424E400A18F8E /* BrdgeUITests */,
@@ -130,12 +162,16 @@
 			isa = PBXGroup;
 			children = (
 				0B30079F224424E300A18F8E /* AppDelegate.swift */,
-				0B3007A1224424E300A18F8E /* FirstViewController.swift */,
-				0B3007A3224424E300A18F8E /* SecondViewController.swift */,
+				0B3007A1224424E300A18F8E /* HomeViewController.swift */,
+				0B3007A3224424E300A18F8E /* NowPlayingViewController.swift */,
 				0B3007A5224424E300A18F8E /* Main.storyboard */,
 				0B3007A8224424E400A18F8E /* Assets.xcassets */,
 				0B3007AA224424E400A18F8E /* LaunchScreen.storyboard */,
 				0B3007AD224424E400A18F8E /* Info.plist */,
+				0B3007DE2249678200A18F8E /* MediaCell.swift */,
+				0BC1E040226404CE00C96C51 /* MusicDetails.swift */,
+				0BC1E0422264F3D300C96C51 /* BaseTabBarController.swift */,
+				0BFDB39D226513A200FEDDDD /* GlobalStateController.swift */,
 			);
 			path = Brdge;
 			sourceTree = "<group>";
@@ -156,6 +192,32 @@
 				0B3007C3224424E400A18F8E /* Info.plist */,
 			);
 			path = BrdgeUITests;
+			sourceTree = "<group>";
+		};
+		0B3007CF22443D0C00A18F8E /* Songs */ = {
+			isa = PBXGroup;
+			children = (
+				0B3007D022443D0C00A18F8E /* All the Shine.mp3 */,
+				0B3007D122443D0C00A18F8E /* Childish Gambino @ The Atrium.mp3 */,
+				0B3007D222443D0C00A18F8E /* Crystal Silence.mp3 */,
+				0B3007D422443D0C00A18F8E /* Wicked Games.mp3 */,
+				0B3007D522443D0C00A18F8E /* Make This Cash Forever (feat. Doughboy Clay & Kiki Alexandria) [Explicit].mp3 */,
+				0B3007D622443D0C00A18F8E /* After School.mp3 */,
+			);
+			name = Songs;
+			path = ../../../Desktop/Songs;
+			sourceTree = "<group>";
+		};
+		0BC1E04F2264F99700C96C51 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				0BC1E051226505BE00C96C51 /* icons8-stop-50.png */,
+				0BC1E052226505BE00C96C51 /* icons8-rewind-50.png */,
+				0BC1E053226505BE00C96C51 /* icons8-fast-forward-50.png */,
+				0BC1E054226505BE00C96C51 /* icons8-play-50.png */,
+				0BC1E055226505BE00C96C51 /* icons8-pause-50.png */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 		66FA2A24FCED41EACAF31650 /* Frameworks */ = {
@@ -179,6 +241,7 @@
 				0B300798224424E300A18F8E /* Sources */,
 				0B300799224424E300A18F8E /* Frameworks */,
 				0B30079A224424E300A18F8E /* Resources */,
+				ED0AB6D3FDDC6F562E908247 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,6 +302,11 @@
 				TargetAttributes = {
 					0B30079B224424E300A18F8E = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					0B3007B1224424E400A18F8E = {
 						CreatedOnToolsVersion = 10.1;
@@ -275,7 +343,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B3007D922443D0C00A18F8E /* Crystal Silence.mp3 in Resources */,
+				0BC1E0572265088600C96C51 /* icons8-rewind-50.png in Resources */,
+				0B3007DB22443D0C00A18F8E /* Wicked Games.mp3 in Resources */,
+				0B3007D822443D0C00A18F8E /* Childish Gambino @ The Atrium.mp3 in Resources */,
+				0BC1E0582265088900C96C51 /* icons8-fast-forward-50.png in Resources */,
+				0B3007DD22443D0C00A18F8E /* After School.mp3 in Resources */,
+				0BC1E0592265088B00C96C51 /* icons8-play-50.png in Resources */,
+				0BC1E0562265088000C96C51 /* icons8-stop-50.png in Resources */,
+				0B3007D722443D0C00A18F8E /* All the Shine.mp3 in Resources */,
+				0BC1E05A2265088F00C96C51 /* icons8-pause-50.png in Resources */,
 				0B3007AC224424E400A18F8E /* LaunchScreen.storyboard in Resources */,
+				0B3007DC22443D0C00A18F8E /* Make This Cash Forever (feat. Doughboy Clay & Kiki Alexandria) [Explicit].mp3 in Resources */,
 				0B3007A9224424E400A18F8E /* Assets.xcassets in Resources */,
 				0B3007A7224424E300A18F8E /* Main.storyboard in Resources */,
 			);
@@ -364,6 +443,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		ED0AB6D3FDDC6F562E908247 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Brdge/Pods-Brdge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LGSideMenuController/LGSideMenuController.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGSideMenuController.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Brdge/Pods-Brdge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -371,9 +472,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B3007A4224424E300A18F8E /* SecondViewController.swift in Sources */,
+				0BC1E041226404CE00C96C51 /* MusicDetails.swift in Sources */,
+				0B3007A4224424E300A18F8E /* NowPlayingViewController.swift in Sources */,
 				0B3007A0224424E300A18F8E /* AppDelegate.swift in Sources */,
-				0B3007A2224424E300A18F8E /* FirstViewController.swift in Sources */,
+				0B3007DF2249678200A18F8E /* MediaCell.swift in Sources */,
+				0B3007A2224424E300A18F8E /* HomeViewController.swift in Sources */,
+				0BFDB39E226513A200FEDDDD /* GlobalStateController.swift in Sources */,
+				0BC1E0432264F3D300C96C51 /* BaseTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
