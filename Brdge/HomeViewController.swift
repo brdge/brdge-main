@@ -17,10 +17,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // View color setting
+        view.backgroundColor = UIColor.lightGray
+        // Table view details
+        myTableView.backgroundColor = UIColor.lightGray
+        myTableView.separatorColor = UIColor.blue
         myTableView.delegate = self
         myTableView.dataSource = self
         indexChanged()
-        print("view loaded")
         
         // myTableView.reloadData()
         //getAlbumTitles()
@@ -28,7 +32,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func indexChanged() {
-        print(gsController)
         switch segmentedControl.selectedSegmentIndex
         {
         case 0:
@@ -76,18 +79,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             NSLog("Nothing selected/Error")
             break;
         }
-        
+        cell.artistLabel.text = gsController?.media[indexPath.row].albumArtist
+        cell.albumImageView.image = gsController?.media[indexPath.row].artwork?.image(at: CGSize(width: 50, height: 50))
+        cell.backgroundColor = UIColor.clear
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var song = (gsController?.media[indexPath.row])!
-        gsController?.currentSong = song
-        var collection = MPMediaItemCollection.init(items: [song])
-        // Sending data to the NowPlayingController
-        gsController?.mediaPlayer.setQueue(with: collection)
+        gsController?.queueTrack(index: indexPath.row)
         gsController?.mediaPlayer.play()
-        tabBarController?.selectedIndex = 1
+        gsController?.isPlaying = true
+        tabBarController?.selectedIndex = 2
     }
 
 }

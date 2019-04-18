@@ -25,6 +25,31 @@ class NowPlayingViewController: UIViewController {
         
         
     }
+    @IBAction func backwardSkipTapped(_ sender: Any) {
+        if (gsController?.isPlaying)! {
+            var index = gsController?.trackIndex ?? 0
+            index = index - 1
+            if index < 0 {
+                index = ((gsController?.media.count)! - 1) ?? 0
+            }
+            gsController?.queueTrack(index: index)
+            gsController?.mediaPlayer.play()
+            updateDisplay()
+        }
+    }
+    @IBAction func forwardSkipTapped(_ sender: Any) {
+        if (gsController?.isPlaying)! {
+            var index = gsController?.trackIndex ?? 0
+            index = index + 1
+            if index >= (gsController?.media.count)! {
+                index =  0
+            }
+            gsController?.queueTrack(index: index)
+            gsController?.mediaPlayer.play()
+            updateDisplay()
+        }
+        
+    }
     @IBAction func PausePlayTapped(_ sender: Any) {
         let tabBar = tabBarController as! BaseTabBarController
         if (gsController?.isPlaying)! {
@@ -41,14 +66,20 @@ class NowPlayingViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let tabBar = tabBarController as! BaseTabBarController
+        updateDisplay()
+
+    }
+    func updateDisplay() {
+        if (gsController?.isPlaying)! {
         albumLabel.text = gsController?.currentSong.albumTitle as! String
         artistLabel.text = gsController?.currentSong.artist as! String
         songTitleLabel.text = gsController?.currentSong.title as! String
         albumArtwork.image = gsController?.currentSong.artwork!.image(at: CGSize(width: 500, height: 500))
         gsController?.isPlaying = true
-
-
+        }
+        else {
+            NSLog("No songs playing")
+        }
     }
 }
 
