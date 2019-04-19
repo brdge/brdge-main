@@ -164,19 +164,13 @@
 		0B30079E224424E300A18F8E /* Brdge */ = {
 			isa = PBXGroup;
 			children = (
+				0BFDB3B0226935B800FEDDDD /* Models */,
+				0BFDB3AF2269359E00FEDDDD /* ViewControllers */,
 				0B30079F224424E300A18F8E /* AppDelegate.swift */,
-				0B3007A1224424E300A18F8E /* HomeViewController.swift */,
-				0B3007A3224424E300A18F8E /* NowPlayingViewController.swift */,
 				0B3007A5224424E300A18F8E /* Main.storyboard */,
 				0B3007A8224424E400A18F8E /* Assets.xcassets */,
 				0B3007AA224424E400A18F8E /* LaunchScreen.storyboard */,
 				0B3007AD224424E400A18F8E /* Info.plist */,
-				0B3007DE2249678200A18F8E /* MediaCell.swift */,
-				0BC1E040226404CE00C96C51 /* MusicDetails.swift */,
-				0BC1E0422264F3D300C96C51 /* BaseTabBarController.swift */,
-				0BFDB39D226513A200FEDDDD /* GlobalStateController.swift */,
-				0BFDB3A72268C4F600FEDDDD /* SettingsViewController.swift */,
-				0BFDB3AB2268DF5500FEDDDD /* LoginViewController.swift */,
 			);
 			path = Brdge;
 			sourceTree = "<group>";
@@ -215,6 +209,28 @@
 				0BC1E055226505BE00C96C51 /* icons8-pause-50.png */,
 			);
 			path = Icons;
+			sourceTree = "<group>";
+		};
+		0BFDB3AF2269359E00FEDDDD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0BC1E0422264F3D300C96C51 /* BaseTabBarController.swift */,
+				0BFDB39D226513A200FEDDDD /* GlobalStateController.swift */,
+				0BFDB3A72268C4F600FEDDDD /* SettingsViewController.swift */,
+				0BFDB3AB2268DF5500FEDDDD /* LoginViewController.swift */,
+				0B3007A1224424E300A18F8E /* HomeViewController.swift */,
+				0B3007A3224424E300A18F8E /* NowPlayingViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0BFDB3B0226935B800FEDDDD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0BC1E040226404CE00C96C51 /* MusicDetails.swift */,
+				0B3007DE2249678200A18F8E /* MediaCell.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		66FA2A24FCED41EACAF31650 /* Frameworks */ = {
@@ -293,6 +309,9 @@
 		0B300794224424E300A18F8E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					0,
+				);
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = awBell;

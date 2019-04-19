@@ -16,6 +16,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var gsController: GlobalStateController?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // View color setting
         view.backgroundColor = UIColor.lightGray
@@ -24,11 +25,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         myTableView.separatorColor = UIColor.blue
         myTableView.delegate = self
         myTableView.dataSource = self
-        indexChanged()
-        
-        // myTableView.reloadData()
-        //getAlbumTitles()
-        // Do any additional setup after loading the view, typically from a nib.
+}
+    override func viewDidAppear(_ animated: Bool) {
+        if (gsController!.appleMusicLoggedIn || gsController!.spotifyLoggedIn) {
+            print("here")
+            indexChanged()
+        }
+        else {
+            myTableView.reloadData()
+        }
     }
     
     @IBAction func indexChanged() {
@@ -55,12 +60,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             myTableView.reloadData()
         default:
             NSLog("Nothing selected/Error")
+            myTableView.reloadData()
             break;
         }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (gsController?.media.count)!
+        if (gsController!.appleMusicLoggedIn || gsController!.spotifyLoggedIn) {
+            return (gsController?.media.count)!
+        }
+        else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -87,6 +98,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         gsController?.queueTrack(index: indexPath.row)
+        gsController?.mediaPlayer.prepareToPlay()
         gsController?.mediaPlayer.play()
         gsController?.isPlaying = true
         tabBarController?.selectedIndex = 2

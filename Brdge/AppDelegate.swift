@@ -18,27 +18,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let tabBarController = window?.rootViewController as! BaseTabBarController
-        let vc1 = tabBarController.viewControllers?.first as! HomeViewController
-        vc1.gsController = gsController
-        let vc2 = tabBarController.viewControllers?.last as! NowPlayingViewController
-        vc2.gsController = gsController
-//            let viewControllers = tabBarController.viewControllers. else {
-//                return true
-//        }
-//        for viewController in viewControllers {
-//            if viewController is HomeViewController {
-//                let vc = viewController as! HomeViewController
-//                vc.gsController = gsController
-//            }
-//            if viewController is NowPlayingViewController {
-//                let vc = viewController as! NowPlayingViewController
-//                vc.gsController = gsController
-//            }
-//            else {
-//                print("error")
-//            }
-//        }
-        print("finished")
+        
+        for vc in tabBarController.viewControllers! {
+            if (vc is HomeViewController) {
+                let vc1 = vc as! HomeViewController
+                vc1.gsController = gsController
+                
+            }
+            else  if (vc is NowPlayingViewController) {
+                let vc1 = vc as! NowPlayingViewController
+                vc1.gsController = gsController
+                
+            }
+            else if (vc is SettingsViewController) {
+                let vc1 = vc as! SettingsViewController
+                vc1.gsController = gsController
+                
+            }
+            else {
+                print(vc)
+            }
+        }
+        Thread.sleep(forTimeInterval: 1.5) // NEVER DO THIS, BUT FUCK IT!
         return true
             
     }

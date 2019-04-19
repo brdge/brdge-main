@@ -19,14 +19,56 @@ class NowPlayingViewController: UIViewController {
     @IBOutlet weak var songTitleLabel: UILabel!
     var gsController: GlobalStateController?
     
+    @IBOutlet weak var durationSlider: UISlider!
+    @IBOutlet weak var elapsedLabel: UILabel!
+    @IBOutlet weak var remainingLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        gsController?.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(NowPlayingViewController.timerFired(_:)), userInfo: nil, repeats: true)
+        gsController?.timer.tolerance = 0.1
+        view.addSubview(gsController!.volumeControl)
         // Do any additional setup after loading the view, typically from a nib.
         
         
     }
-    @IBAction func backwardSkipTapped(_ sender: Any) {
+    @objc func timerFired(_:AnyObject) {
         if (gsController?.isPlaying)! {
+            let trackDuration = gsController?.currentSong.playbackDuration
+            
+            let trackElapsed = gsController?.mediaPlayer.currentPlaybackTime
+            let trackDurationMinutes = Int(trackDuration! / 60)
+            
+            let trackDurationSeconds = Int(trackDuration!) % 60
+        
+            let trackElapsedMinutes = Int(trackElapsed! / 60)
+            
+            let trackElapsedSeconds = Int(trackElapsed!) % 60
+            
+            if trackElapsedSeconds < 10 {
+                elapsedLabel.text = " \(trackElapsedMinutes):0\(trackElapsedSeconds)"
+            } else {
+                elapsedLabel.text = " \(trackElapsedMinutes):\(trackElapsedSeconds)"
+            }
+            let trackRemaining = Int(trackDuration!) - Int(trackElapsed!)
+            
+            let trackRemainingMinutes = trackRemaining / 60
+            
+            let trackRemainingSeconds = trackRemaining % 60
+            
+            if trackRemainingSeconds < 10 {
+                remainingLabel.text = " \(trackRemainingMinutes):0\(trackRemainingSeconds)"
+            } else {
+                remainingLabel.text = " \(trackRemainingMinutes):\(trackRemainingSeconds)"
+            }
+            durationSlider.maximumValue = Float(trackDuration!)
+            durationSlider.value = Float(trackElapsed!)
+        }
+        
+    }
+    @IBAction func durationSliderChanged(_ sender: Any) {
+        gsController?.mediaPlayer.currentPlaybackTime = TimeInterval(durationSlider.value)
+    }
+    @IBAction func backwardSkipTapped(_ sender: Any) {
             var index = gsController?.trackIndex ?? 0
             index = index - 1
             if index < 0 {
@@ -35,10 +77,8 @@ class NowPlayingViewController: UIViewController {
             gsController?.queueTrack(index: index)
             gsController?.mediaPlayer.play()
             updateDisplay()
-        }
     }
     @IBAction func forwardSkipTapped(_ sender: Any) {
-        if (gsController?.isPlaying)! {
             var index = gsController?.trackIndex ?? 0
             index = index + 1
             if index >= (gsController?.media.count)! {
@@ -47,7 +87,6 @@ class NowPlayingViewController: UIViewController {
             gsController?.queueTrack(index: index)
             gsController?.mediaPlayer.play()
             updateDisplay()
-        }
         
     }
     @IBAction func PausePlayTapped(_ sender: Any) {
@@ -76,6 +115,7 @@ class NowPlayingViewController: UIViewController {
         songTitleLabel.text = gsController?.currentSong.title as! String
         albumArtwork.image = gsController?.currentSong.artwork!.image(at: CGSize(width: 500, height: 500))
         gsController?.isPlaying = true
+            gsController?.mediaPlayer.play()
         }
         else {
             NSLog("No songs playing")
